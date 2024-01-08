@@ -1,0 +1,111 @@
+### ADD REGISTER
+POST localhost:8080/api/register/add
+Content-Type: application/json
+
+{
+  "studentId": 7,
+  "courceId": 3,
+  "statusId": 1
+}
+
+### UPDATE REGISTER
+PUT localhost:8080/api/register/update?registerId=29
+Content-Type: application/json
+
+{
+
+}
+
+### Delete Register
+DELETE localhost:8080/api/register/delete?registerId=31
+
+### Paging Regsiter
+GET localhost:8080/api/register/paging/find/all?pageNum=8&sizeOf=3
+
+### Find all authority
+GET localhost:8080/api/authority/find/all
+
+### Delete authority
+DELETE localhost:8080/api/authority/delete?id=1&isDelete=true
+
+##################### Account
+### Find all account
+GET localhost:8080/api/account/find/all
+
+### Paging find all
+GET localhost:8080/api/account/paging/find/all?pageNum=2&sizeOf=1
+
+### Find by fullname
+GET localhost:8080/api/account/find?fullname=ct
+
+### Paging find by fullname
+GET localhost:8080/api/account/paging/find?fullname=ct&pageNum=1&sizeOf=1
+
+### Add account
+POST localhost:8080/api/account/add
+Content-Type: application/json
+
+{
+  "username": "chuan1",
+  "password": "as1dasda% ",
+  "authorityId": 2
+}
+
+### Update account
+PUT localhost:8080/api/account/update
+Content-Type: application/json
+
+{
+  "accountId": 5,
+  "fullname": "La Văn Chuân",
+  "username": "chuan2",
+  "password": "abc2.com",
+  "authorityId": 2
+}
+
+#################### Article
+### Find all
+GET localhost:8080/api/article/find/all
+
+### Paging find all
+GET localhost:8080/api/article/paging/find/all?pageNum=2&sizeOf=1
+
+### Paging find by article name
+GET localhost:8080/api/article/paging/find?pageNum=2&sizeOf=1&articleName=a
+
+### Add article
+POST localhost:8080/api/article/add
+Content-Type: application/json
+
+{
+  "themeId": 1,
+  "accountId": 2,
+  "articleName": "Python",
+  "authorName": "Chuan",
+  "content": "..",
+  "shortContent": "..",
+  "image": "./img/.."
+}
+
+############## article type
+### Add
+POST localhost:8080/api/articleType/add
+Content-Type: application/json
+
+{
+  "articleTypeId": 1,
+"articleTypeName": "Thông báo"
+}
+
+### Add
+POST localhost:8080/api/theme/add
+Content-Type: application/json
+
+{
+  "articleTypeId": 2,
+  "content": "abc",
+  "themeName": "abc"
+}
+### DEL
+DELETE localhost:8080/api/articleType/delete?articleTypeId=1&isDelete=true
+
